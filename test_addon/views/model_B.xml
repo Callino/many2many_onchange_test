@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="model_b_tree" model="ir.ui.view">
+            <field name="name">Model B</field>
+            <field name="model">model.b</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="name"/>
+                    <field name="model_c_ids" widget="many2many_tags"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="model_b_form" model="ir.ui.view">
+            <field name="name">Model B</field>
+            <field name="model">model.b</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="model_c_ids" widget="many2many_tags"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="model_b_action_window" model="ir.actions.act_window">
+            <field name="name">Model B</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model.b</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                <!-- Add Text Here -->
+              </p><p>
+                <!-- More details about what a user can do with this object will be OK -->
+              </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>
